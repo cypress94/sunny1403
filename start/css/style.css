@@ -6,9 +6,284 @@
  * Made By MaterializeCSS.com
  */
 
-.icon-block {
+/*.icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
+}*/
+
+
+/*--------------------------------------------------------------------------------------------------body */
+body{
+    height:100%;
+    background-color: #356661;
 }
+
+/*--------------------------------------------------------------------------------------------------header */
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 18rem;
+    padding: 2rem;
+    line-height: 64px;
+}
+
+nav .brand-logo {
+        color: #EF9004;
+        font-size: 3rem;
+}
+
+/*--------------------------------------------------------------------------------------------------footer */
+footer.page-footer {
+    margin-top: 0px;
+}
+
+#footer_line{
+    height: 5rem;
+}
+
+footer.page-footer {
+    background-color: #356A65;
+}
+
+footer.page-footer .footer-copyright {
+    font-weight: 300;
+    height: 5rem;
+}
+
+
+/*--------------------------------------------------------------------------------------------------cards */
+
+.number_info{
+    width: 100%;
+    height: 10rem;
+}
+
+.food_info{
+    width: 100%;
+    height: 35rem;
+}
+
+.sport_info{
+    width: 100%;
+    height: 35rem;
+}
+
+.parameters_info{
+    display:block;
+    width: 100%;
+    height: auto;
+}
+
+.card_opacity{
+    /*opacity: 0.7;*/
+    /*background-color: rgba(255,255,255,0.95);*/
+    background-color: #ffffff;
+}
+
+
+/*--------------------------------------------------------------------------------------------------text */
+.params_title_text{
+    text-align: center; 
+    color: #26a69a !important;
+    font-size: 2rem; 
+    font-weight:500;
+}
+
+
+.about_us_text {
+    /* text-align: center; */
+    color: #ffffff !important;
+    /* font-style: italic; */
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.about_us_text1 {
+     text-align: left; 
+    color: #ffffff !important;
+    /* font-style: italic; */
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    line-height:2rem;
+}
+
+.motivation_text{
+    text-align: left;
+    color: #FD3F80 !important;
+    /* font-style: italic; */
+    font-size: 3.0rem;
+    font-weight: 700;
+    line-height: 2.9rem;
+    padding-bottom: 1rem;
+    /*font-family:lato;*/
+}
+
+.title_text{
+    text-align: center; 
+    color:  #26A69A !important;
+    font-size: 1.7rem; 
+    font-weight:500;
+}
+
+
+html {
+    color: rgb(158, 158, 158);
+}
+
+.select-wrapper span.caret {
+    color: rgb(158, 158, 158);
+}
+
+label {
+    font-size: 1rem;
+    color: #9e9e9e;
+}
+
+/*--------------------------------------------------------------------------------------------------lines */
+
+#line_about_us{
+    background-color: #ff9800;
+    margin-top: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------images */
+
+#back_image{
+    /*width: 100%;*/
+    background-size: cover, contain;
+    background-image: url('../images/velo.jpg');
+    padding: 0;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+#logo_image{
+    background-image: url('../images/logo.png');
+    height: 15rem;
+    width: 60rem;
+    background-size: contain;
+    background-color:transparent;
+}
+
+#logo_image1{
+    background-image: url('../images/logo1.png');
+    height: 16rem;
+    width: 33rem;
+    margin: 1rem;
+    /*height: 10vw;
+    width: 18vw;
+    margin: 0rem;*/
+    background-size: contain;
+    background-color:transparent;
+}
+
+.logo_image2{
+    background-image: url('../images/logo3.png');
+    height: 18rem;
+    width: 32rem;
+    margin: 1rem;
+    background-size: contain;
+    background-color:transparent;
+}
+
+/*--------------------------------------------------------------------------------------------------others */
+
+/*.select-wrapper input.select-dropdown {
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    outline: none;
+    height: 3rem;
+    line-height: 3rem;
+    width: 95%;
+    font-size: 1rem;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: block;
+}*/
+
+
+.no_magin_bottom{
+        margin-bottom: 0;
+}
+
+.btn, .btn-large, .btn-flat {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    outline: 0;
+    padding: 0 2rem;
+    text-transform: none;
+}
+
+
+
+/********************************************************************************************************************* media */
+
+@media only screen and (max-width: 600px) {
+    .logo_image_less {
+    height: 11rem;
+    width: 20rem;
+    }
+
+    /*.cards_same_size{
+        width: 80vw;
+        margin: 5vw;
+    }*/
+
+    .no_padding_when_small{
+        padding: 0  !important;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .logo_image_less {
+        height: 18vw;
+        width: 32vw;
+    }
+}
+
+
+@media only screen and (min-width: 6000px) {
+    .logo_image_less {
+        height: 14rem;
+        width: 25rem;
+    }
+}
+
+
+@media only screen and (max-width: 850px) and (min-width:500px) {
+    .title_text_less {
+    font-size: 1.2rem; 
+    font-weight:500;
+    }
+
+    [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
+        /*padding-left: 35px;*/
+        padding-left: 1.8rem;
+        font-size: 0.6rem;
+    }
+
+    label {
+        font-size: 0.8rem;
+        color: #9e9e9e;
+    }
+
+    .btn, .btn-large, .btn-flat {
+    width: 100%;
+    /*padding: 0 1rem;
+    font-size: 1rem;*/
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+}
+    }
+}
+
