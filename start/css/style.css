@@ -55,17 +55,17 @@ footer.page-footer .footer-copyright {
 
 .number_info{
     width: 100%;
-    height: 10rem;
+    min-height: 10rem;
 }
 
 .food_info{
     width: 100%;
-    height: 35rem;
+    min-height: 35rem;
 }
 
 .sport_info{
     width: 100%;
-    height: 35rem;
+    min-height: 35rem;
 }
 
 .parameters_info{
@@ -126,6 +126,12 @@ footer.page-footer .footer-copyright {
     text-align: center; 
     color:  #26A69A !important;
     font-size: 1.7rem; 
+    font-weight:500;
+}
+
+.info_text{
+    text-align: left;
+    font-size: 1.2rem; 
     font-weight:500;
 }
 

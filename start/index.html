@@ -49,11 +49,13 @@
             </div>
         </div>
 
+        <!--<form >-->
         <div class="row "></div>
         <div class="container">
             <div class="row" style="margin-bottom:0;">
                 <div class="col m3 s12">
                     <div class="card-panel card_opacity">
+                        <!--<form action="#">-->
                         <div class="parameters_info">
                             <div class="title_text title_text_less">Параметры</div>
                             <!--<p class="flow-text params_title_text">Параметры</p>-->
@@ -66,7 +68,7 @@
                                     </div>
                                     <div class="col s12 m8">
                                         <p>
-                                            <input name="group1" type="radio" id="test1" />
+                                            <input name="group1" type="radio" id="test1" checked />
                                             <label for="test1">Мужской</label>
                                         </p>
                                         <p>
@@ -87,19 +89,21 @@
             </div>-->
                             <div class=" row no_magin_bottom">
                                 <div class="input-field col s12">
-                                    <input id="height" type="number" min="0" class="validate">
-                                    <label for="height">Рост</label>
+                                    <input id="height" type="number" min="0" class="validate" required>
+                                    <label for="height">Рост, см</label>
+                                    <!--<input type="number" min="2" step="1" name="height" id="height" placeholder="height" required>
+                                    <input type="submit" value="Рассчитать" class="btn waves-effect waves-light" />-->
                                 </div>
                             </div>
                             <div class=" row no_magin_bottom">
                                 <div class="input-field col s12">
-                                    <input id="weight" type="number" min="0" class="validate">
-                                    <label for="weight">Вес</label>
+                                    <input id="weight" name="weight" type="number" min="0" class="validate" required>
+                                    <label for="weight">Вес, кг</label>
                                 </div>
                             </div>
                             <div class=" row no_magin_bottom">
                                 <div class="input-field col s12">
-                                    <input id="age" type="number" min="0" class="validate">
+                                    <input id="age" type="number" min="18" class="validate" required>
                                     <label for="age">Возраст</label>
                                 </div>
                             </div>
@@ -126,13 +130,15 @@
                                 </div>
                             </div>
                             <div align="center">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">
+                                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="show_num_info();">
                                     Рассчитать
                                     <i class="material-icons right">send</i>
                                 </button>
+                                <!--<input type="submit" value="Рассчитать" class="btn waves-effect waves-light" />-->
                             </div>
                             <div class="row"></div>
                         </div>
+                        <!--</form>-->
                     </div>
                 </div>
                 <div class="col m9 s12 no_padding_when_small" style="padding:0;">
@@ -140,6 +146,7 @@
                         <div class="card-panel card_opacity">
                             <div class="number_info">
                                 <div class="title_text title_text_less">Немного чисел</div>
+                                <div class="info_text" id="num_info_text"></div>
                             </div>
                         </div>
                     </div>
@@ -160,6 +167,7 @@
                 </div>
             </div>
         </div>
+        <!--</form>-->
     </div>
 <!--</div>-->
 
@@ -178,12 +186,14 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/site.js"></script>
     <script>
         $(document).ready(function () {
             $('select').material_select();
         });
     </script>
-
+    <script>
+    </script>
 
 
   </body>
