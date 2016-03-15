@@ -22,7 +22,7 @@
 //        el.oninvalid = function (e) {
 //            e.target.setCustomValidity("");
 //            if (!e.target.validity.valid) {
-//                e.target.setCustomValidity("This field cannot be left blank");
+//                e.target.setCustomValidity("Выберите один из пунстов списка");
 //            }
 //        };
 //        el.oninput = function (e) {
