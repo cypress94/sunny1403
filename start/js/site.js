@@ -54,9 +54,9 @@ function show_num_info() {
     per.set_perfect_weight();
     per.set_index();
     var to_html = "Калорийность: " + per.energy.calories.toFixed(0) + " ккал <br \>" +
-        "Жиры: " + per.energy.fat + " г <br \>" +
-        "Белки: " + per.energy.protein + " г <br \>" +
-        "Углеводы: " + per.energy.carbohydrates + " г <br \>" +
+        "Жиры: " + per.energy.fat.toFixed(0) + " г <br \>" +
+        "Белки: " + per.energy.protein.toFixed(0) + " г <br \>" +
+        "Углеводы: " + per.energy.carbohydrates.toFixed(0) + " г <br \>" +
         "Вода: " + per.energy.water + " мл <br \>" +
         "<br \>" +
         "Индекс массы тела: " + per.index.toFixed(2) + " (норма: " + per.min_index + " - " + per.max_index + " )<br \>" +
@@ -80,15 +80,24 @@ function person(t_age, t_sex, t_weight, t_height, t_activity, t_goal) {
     this.perfect_weight = 0;
 
     this.set_energy = function () {
+        var act_k_pr = 1;
+        var act_k_car = 1;
+
+        if (this.activity == 1) { act_k_pr = 0.7; act_k_car = 0.8; }
+        if (this.activity == 2) { act_k_pr = 0.8; act_k_car = 0.9; }
+        if (this.activity == 3) { act_k_pr = 1.0; act_k_car = 1.0; }
+        if (this.activity == 4) { act_k_pr = 1.0; act_k_car = 1.25; }
+        if (this.activity == 5) { act_k_pr = 1.0; act_k_car = 1.5; }
+
         this.energy.water = 50 * this.weight;
         this.energy.fat = 1 * this.weight;
-        this.energy.protein = 2 * this.weight;
+        this.energy.protein = 2 * act_k_pr * this.weight;
         if (this.goal == 1)
-            this.energy.carbohydrates = 3 * this.weight;
+            this.energy.carbohydrates = 3 * this.weight * act_k_car;
         if (this.goal == 2)
-            this.energy.carbohydrates = 3.5 * this.weight;
+            this.energy.carbohydrates = 3.5 * this.weight * act_k_car;
         if (this.goal == 3)
-            this.energy.carbohydrates = 4 * this.weight;
+            this.energy.carbohydrates = 4 * this.weight * act_k_car;
 
         this.energy.calories = 9.3 * this.energy.fat +
             4.1 * (this.energy.carbohydrates + this.energy.protein);
