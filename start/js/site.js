@@ -55,6 +55,9 @@ function show_num_info() {
     per.show_food_program();
 
 
+    var sport = new sport_activity(a_age, a_sex, a_weight, a_height, a_activity, a_goal);
+    sport.show_sport_program();
+
 }
 
 function person(t_age, t_sex, t_weight, t_height, t_activity, t_goal) {
@@ -229,4 +232,122 @@ function product(fat, cur, pr) {
     this.cur = cur;
     this.pr = pr;
     this.count = 0;
+}
+
+
+
+function sport_activity(a_age, a_sex, a_weight, a_height, a_activity, a_goal) {
+    this.age = a_age;
+    this.sex = a_sex;
+    this.weight = a_weight;
+    this.height = a_height;
+    this.activity = a_activity;
+    this.goal = a_goal;
+    this.energy = {};
+
+
+    this.get_sport_program = function()
+    {
+        var program = "";
+        this.index = this.weight / Math.pow((this.height / 100), 2); // ИМТ
+        if (this.index < 19 && this.goal == 1)
+        {
+                program = "В вашем случае похудение не рекомендуется!<br \>"
+            + "Выберите другую цель.";
+        }
+        else {
+            program = "<br \>Тренировка на неделю: ";
+            if (this.sex == "male")
+            {
+                program += 
+            "<br \>A: Тренировка груди и спины" +
+            "<ul>" +
+            "<li> Жим штанги лёжа (грудь)</li>" +
+            "<li> Тяга штанги в наклоне (спина)</li>" +
+            "<li> Шраги со штангой стоя (трапеции)</li>" +
+            "<li> Гиперэкстензия без веса</li>" +
+            "</ul>" +
+            "B: Тренировка рук" +
+            "<ul>" +
+            "<li> Сгибание рук стоя со штангой(бицепсы)</li>" +
+            "<li> Жим штанги лёжа (трицепсы)</li>" +
+            "<li> Жим станги сидя (плечи)</li>" +
+            "<li> Весы на перекладине</li>" +
+            "</ul>" + 
+            "С: Тренировка ног и пресса" +
+            "<ul>" +
+            "<li> Приседания со штангой</li>" +
+            "<li> Сгибание рук стоя</li>" +
+            "<li> Обратные скручивания в висе</li>" +
+            "</ul>";
+
+                program += 
+                "<br \> Общая информация: " +
+                "<ul>" +
+                "<li>Перед тренировкой разминка 5-10 минут </li>" +
+                "<li>Упражнения состоят из 2 разминочных подхода по 10 повторений  ";
+                if (this.goal == 1 || this.goal == 2)
+                    program += "и 3 рабочих подхода по 7-8 повторений </li>";
+                else program += "и 4 рабочих подхода по 8-10 повторений </li>";
+            program += "</ul>";
+            }
+            if (this.sex == "female")
+            {
+                program +=
+            "<br \>A: Тренировка ног" +
+            "<ul>" +
+            "<li> Велосипед</li>" +
+            "<li> Приседания со штангой</li>" +
+            "<li> Жим ногами</li>" +
+            "<li> Выпады</li>" +
+            "<li> Сгибание ног</li>" +
+            "<li> Подъём на носки</li>";
+                if (this.goal == 1 || this.goal == 2)
+                    program += "<li> Дорожка 25 мин</li>";
+            program +="</ul>" +
+            "B: Тренировка спина-грудь-трицепсы" +
+            "<ul>" +
+            "<li> Становая тяга</li>" +
+            "<li> Тяга вертикального блока к груди</li>" +
+            "<li> Гиперэкстензия</li>" +
+            "<li> Жим штанги узким хватом</li>" +
+            "<li> Жим на наклонной скамье</li>" +
+            "</ul>" +
+            "С: Тренировка руки-плечи" +
+            "<ul>" +
+            "<li> Подъём штанги на бицепс</li>" +
+            "<li> Жим штанги узким хватом</li>" +
+            "<li> Жим гантели сидя</li>" +
+            "<li> Тяга штанги к подбородку</li>";
+            if (this.goal == 1 || this.goal == 2)
+                program += "<li> Дорожка 20 мин</li>";
+            program += "</ul>";
+
+            if (this.goal == 1 || this.goal == 2)
+                program += "<br \> Уделить один день аэробным нагрузкам (1 час): плавание | бег<br \>"
+            program +=
+            "<br \> Общая информация: " +
+            "<ul>" +
+            "<li>Перед тренировкой разминка 5-10 минут </li>";
+            if (this.goal == 1 || this.goal == 2)
+                program += "<li>Упражнения состоят из 3 подхода по 15 повторений;</li>";
+            else program += "<li>Упражнения состоят из 4 подхода по 12 повторений;</li>";
+            program += "</ul>";
+            }
+            program += "<ul>" +
+            "<li>Отдых между тренировками - 1-2 дня;</li>" +
+            "<li>Отдых между подходами - 2 мин;</li>" +
+            "<li>Программу необходимо согласовать с тренером;</li>" +
+            "<li>Программу желательно менять каждые несколько месяцев; </li>" +
+            "<li>Вес подбирается индивидуально.</li>" +
+            "</ul>";
+            }
+        return program;
+    }
+
+    this.show_sport_program = function () {
+        to_html = this.get_sport_program();
+           
+        document.getElementById("sport_info_text").innerHTML = to_html;
+    }
 }
