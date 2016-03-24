@@ -31,7 +31,9 @@
     
 //})
 
-function show_num_info() {
+
+
+function show_all_info() {
     //alert("ewgtgre");
     var a_height = document.getElementById("height").value;
     var a_weight = document.getElementById("weight").value;
@@ -57,6 +59,7 @@ function show_num_info() {
 
     var sport = new sport_activity(a_age, a_sex, a_weight, a_height, a_activity, a_goal);
     sport.show_sport_program();
+    //cards_to_same_size();
 
 }
 

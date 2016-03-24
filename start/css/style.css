@@ -196,6 +196,27 @@ label {
     background-color:transparent;
 }
 
+/*--------------------------------------------------------------------------------------------------lists */
+ul {
+    /* padding: 0; */
+    padding-left: 2rem;
+    margin: 0;
+}
+
+ul li {
+    list-style-type: circle;
+}
+
+
+.dropdown-content li {
+     color: rgb(158, 158, 158); 
+     list-style-type: none;
+}
+
+.dropdown-content{
+    padding-left: 0;
+}
+
 /*--------------------------------------------------------------------------------------------------others */
 
 /*.select-wrapper input.select-dropdown {
@@ -230,15 +251,7 @@ label {
     text-transform: none;
 }
 
-ul {
-    /* padding: 0; */
-    padding-left: 2rem;
-    margin: 0;
-}
 
-ul li {
-    list-style-type: circle;
-}
 
 
 
@@ -299,7 +312,6 @@ ul li {
     font-size: 1rem;*/
     padding: 0 0.5rem;
     font-size: 0.8rem;
-}
     }
 }
 
