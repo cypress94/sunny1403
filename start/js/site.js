@@ -31,6 +31,18 @@
     
 //})
 
+function cards_to_same_size() {
+    var element1 = document.getElementById('food_info');
+    var element2 = document.getElementById('sport_info');
+    var style1 = element1.currentStyle || window.getComputedStyle(element1, null);
+    var style2 = element2.currentStyle || window.getComputedStyle(element2, null);
+    var h1 = +style1.height.slice(0,-2);
+    var h2 = +style2.height.slice(0, -2);
+    var max = Math.max(h1, h2);
+    element1.style.height = max + 'px';
+    element2.style.height = max + 'px';
+}
+
 
 
 function show_all_info() {
@@ -59,7 +71,7 @@ function show_all_info() {
 
     var sport = new sport_activity(a_age, a_sex, a_weight, a_height, a_activity, a_goal);
     sport.show_sport_program();
-    //cards_to_same_size();
+    cards_to_same_size();
 
 }
 
@@ -259,7 +271,7 @@ function sport_activity(a_age, a_sex, a_weight, a_height, a_activity, a_goal) {
             + "Выберите другую цель.";
         }
         else {
-            program = "<br \>Тренировка на неделю: ";
+            program = "Тренировка на неделю: ";
             if (this.sex == "male")
             {
                 program += 
@@ -327,7 +339,7 @@ function sport_activity(a_age, a_sex, a_weight, a_height, a_activity, a_goal) {
             program += "</ul>";
 
             if (this.goal == 1 || this.goal == 2)
-                program += "<br \> Уделить один день аэробным нагрузкам (1 час): плавание | бег<br \>"
+                program += "<br \> Уделить один день аэробным нагрузкам (1 час): плавание | быстрая ходьба<br \>"
             program +=
             "<br \> Общая информация: " +
             "<ul>" +

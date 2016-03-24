@@ -58,12 +58,12 @@ footer.page-footer .footer-copyright {
     min-height: 10rem;
 }
 
-.food_info{
+#food_info{
     width: 100%;
     min-height: 35rem;
 }
 
-.sport_info{
+#sport_info{
     width: 100%;
     min-height: 35rem;
 }
