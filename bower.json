@@ -1,0 +1,14 @@
+
+{
+    "name": "test_project",
+    "version": "0.1.0",
+    "authors": [
+        "Belyeva Belyakova Lotova"
+    ],
+    "main": "start/test/index.html",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ]
+}

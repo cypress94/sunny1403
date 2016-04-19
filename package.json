@@ -1,0 +1,28 @@
+{
+  "name": "test_project",
+  "version": "0.1.0",
+  "description": "Trying to make QUnit run on Travis CI",
+  "main": "start/test/index.html",
+  "dependencies": {
+    "download": "^4.4.3",
+    "grunt": "^0.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": "^0.8",
+    "grunt-contrib-qunit": "^0.5",
+
+	"jquery": "^2.1.1",
+    "load-grunt-config": "^0.10",
+    "load-grunt-tasks": "^0.6",
+    "qunitjs": "^1.14.0",
+    "time-grunt": "^0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cypress94/sunny1403.git"
+  },
+  "author": "Belyeva Belyakova Lotova",
+  "scripts": {
+    "test": "grunt test --verbose"
+  }
+}

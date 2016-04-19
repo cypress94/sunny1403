@@ -1,4 +1,11 @@
-﻿test("Тест функции person()", function() {
+﻿jQuery(document).ready(function() {
+
+QUnit.module('Core', {
+        setup: function() {},
+        teardown: function() {}
+    });
+
+QUnit.test("Тест функции person()", function() {
 
     var a_height = 170;
     var a_weight = 60;
@@ -12,7 +19,7 @@ ok(per.weight==a_weight, 'Проверка создания экземпляра
 
 });
 
-test("Тест функции person.set_energy()", function() {
+QUnit.test("Тест функции person.set_energy()", function() {
 
 var per = new person(20, "male", 60, 170, 2, 2);
 per.set_energy();
@@ -30,7 +37,7 @@ equal(per.energy.calories, 2126.25, 'Больше тренировок');
 });
 
 
-test("Тест функции person.set_index()", function() {
+QUnit.test("Тест функции person.set_index()", function() {
 
 var per = new person(20, "male", 60, 170, 2, 2);
 per.set_index();
@@ -48,7 +55,7 @@ equal(per.max_index, 25, 'Старше');
 });
 
 
-test("Тест функции person.set_perfect_weight()", function() {
+QUnit.test("Тест функции person.set_perfect_weight()", function() {
 
 var per = new person(20, "male", 60, 170, 2, 2);
 per.set_perfect_weight();
@@ -65,3 +72,4 @@ equal(per.perfect_weight, 63.29159055118111, 'Старше');
 
 });
 
+});
