@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://webfonts.ru/import/lato.css' rel='stylesheet' type='text/css'>
+    <link href='http://webfonts.ru/import/fontin.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+        <!--<nav class=" white" role="navigation">
+            <div class="nav-wrapper container">
+                <div id="logo_image"></div>
+                <a id="logo-container" href="#" class="brand-logo">Жить круто</a>
+            </div>
+        </nav>-->
+
+
+<!--<div class="section white" >-->
+    <div id="back_image">
+        <div class="card-panel" id="line_about_us">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="logo_image2 logo_image_less"></div>
+                    </div>
+                    <div class="col s12 m6">
+                        <!--<div class="about_us_text1">
+                            Привет! Мы создали этот простой сервис, <br />чтобы чуточку улучшить твою жизнь.
+                            Тебе нужно всего лишь ввести свои данные, а мы поможем тебе наладить правильное питание и тренировочный процесс.
+                            А дальше все зависит только от тебя!
+                            <br />Только ты в ответе за то, что с тобой происходит! <br />Встань и займись собой!
+                        </div>-->
+                        <div class="about_us_text1">
+                            <div class="motivation_text">Только ты в ответе за то, что с тобой происходит!<br /></div>
+                            Этот простой сервис чуточку улучшит твою жизнь.
+                            Тебе нужно всего лишь ввести свои данные, а мы поможем тебе наладить правильное питание и тренировочный процесс.
+                            <br />Займись собой прямо сейчас!
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form action="javascript:show_all_info()">
+            <div class="row "></div>
+            <div class="container">
+                <div class="row" style="margin-bottom:0;">
+                    <div class="col m3 s12">
+                        <div class="card-panel card_opacity">
+                            <!--<form action="#">-->
+                            <div class="parameters_info">
+                                <div class="title_text title_text_less">Параметры</div>
+                                <!--<p class="flow-text params_title_text">Параметры</p>-->
+                                <div class="row no_magin_bottom">
+                                    <form action="#">
+                                        <div class="col s12 m4">
+                                            <div class="row"></div>
+                                            <label style="">Пол</label>
+
+                                        </div>
+                                        <div class="col s12 m8">
+                                            <p>
+                                                <input name="group1" type="radio" id="test1" checked />
+                                                <label for="test1">Мужской</label>
+                                            </p>
+                                            <p>
+                                                <input name="group1" type="radio" id="test2" />
+                                                <label for="test2">Женский</label>
+                                            </p>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--<div class="row">
+                                <div class="input-field col s12">
+                                    <select name="" id="selector_sex">
+                                        <option value="0" selected disabled>Пол</option>
+                                        <option value="1">Мужской</option>
+                                        <option value="2">Женский</option>
+                                    </select>
+                                </div>
+                            </div>-->
+                                <div class=" row no_magin_bottom">
+                                    <div class="input-field col s12">
+                                        <input id="height" type="number" min="0" class="validate" required>
+                                        <label for="height">Рост, см</label>
+                                        <!--<input type="number" min="2" step="1" name="height" id="height" placeholder="height" required>
+                                    <input type="submit" value="Рассчитать" class="btn waves-effect waves-light" />-->
+                                    </div>
+                                </div>
+                                <div class=" row no_magin_bottom">
+                                    <div class="input-field col s12">
+                                        <input id="weight" name="weight" type="number" min="0" class="validate" required>
+                                        <label for="weight">Вес, кг</label>
+                                    </div>
+                                </div>
+                                <div class=" row no_magin_bottom">
+                                    <div class="input-field col s12">
+                                        <input id="age" type="number" min="18" class="validate" required>
+                                        <label for="age">Возраст</label>
+                                    </div>
+                                </div>
+                                <div class="row no_magin_bottom">
+                                    <div class="input-field col s12">
+                                        <select required name="selector_activity" id="selector_activity">
+                                            <!--<option value="0" selected disabled>Активность</option>-->
+                                            <option value="">Активность</option>
+                                            <option value="1">Сидячий образ жизни</option>
+                                            <option value="2">Легкие тренировки 1-3 раз в неделю</option>
+                                            <option value="3">Умеренные тренировки 3-5 раз в неделю</option>
+                                            <option value="4">Интенсивные тренировки 3-5 раз в неделю</option>
+                                            <option value="5">Тренировки каждый день</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <select name="" id="selector_goal" required>
+                                            <!--<option value="0" selected disabled>Цель</option>-->
+                                            <option value="" >Цель</option>
+                                            <option value="1">Похудание</option>
+                                            <option value="2">Поддержание</option>
+                                            <option value="3">Набор массы</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div align="center">
+                                    <!--<button class="btn waves-effect waves-light" type="submit" name="action" onclick="show_num_info();">-->
+                                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                                        Рассчитать
+                                        <i class="material-icons right">send</i>
+                                    </button>
+                                    <!--<input type="submit" value="Рассчитать" class="btn waves-effect waves-light" />-->
+                                </div>
+                                <div class="row"></div>
+                            </div>
+                            <!--</form>-->
+                        </div>
+                    </div>
+                    <div class="col m9 s12 no_padding_when_small" style="padding:0;">
+                        <div class="col s12">
+                            <div class="card-panel card_opacity">
+                                <div class="number_info">
+                                    <div class="title_text title_text_less">Немного чисел</div>
+                                    <div class="info_text" id="num_info_text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m6 s12">
+                            <div class="card-panel card_opacity">
+                                <div class="food_info" id="food_info">
+                                    <div class="title_text title_text_less">Рекомендуемое питание</div>
+                                    <div class="info_text" id="food_info_text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col m6 s12">
+                            <div class="card-panel card_opacity">
+                                <div class="sport_info" id="sport_info">
+                                    <div class="title_text title_text_less">Физическая нагрузка</div>
+                                    <div class="info_text" id="sport_info_text"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+<!--</div>-->
+
+  <footer class="page-footer" style="padding-top: 0;">
+    <!--<div class="container">
+    </div>-->
+    <div class="footer-copyright">
+      <div class="container">         
+        <p>Беляева, Белякова, Лотова  ©  Все права защищены</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/site.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').material_select();
+        });
+    </script>
+    <script>
+    </script>
+
+
+  </body>
+</html>
