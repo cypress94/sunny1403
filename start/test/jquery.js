@@ -1,3 +1,12 @@
+
+    if (typeof(define) == 'undefined') {
+        setTimeout("initJQuerydefine()", 50);
+    } else {
+
+   
+
+
+
 define( [
 	"./core",
 	"./selector",
@@ -35,3 +44,6 @@ define( [
 return ( window.jQuery = window.$ = jQuery );
 
 } );
+
+
+}
