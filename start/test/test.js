@@ -1,4 +1,12 @@
-﻿jQuery(document).ready(function() {
+﻿
+    if (typeof(jQuery) == 'undefined') {
+        setTimeout("initJQuery()", 50);
+    } else {
+
+   
+
+
+jQuery(document).ready(function() {
 
 QUnit.module('Core', {
         setup: function() {},
@@ -73,3 +81,6 @@ equal(per.perfect_weight, 63.29159055118111, 'Старше');
 });
 
 });
+
+
+} 
