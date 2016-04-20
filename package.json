@@ -4,7 +4,7 @@
   "description": "Trying to make QUnit run on Travis CI",
   "main": "start/test/index.html",
   "dependencies": {
-    "download": "^4.4.3",
+
     "grunt": "^0.4"
   },
   "devDependencies": {
